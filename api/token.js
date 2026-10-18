@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     if (typeof data.value !== 'string' || !data.value) {
       return res.status(502).json({ error: 'xAI returned an unexpected token response (missing value).' });
     }
-    const agentId = process.env.XAI_AGENT_ID?.trim() || 'agent_Vz9BTmD6exM3epLD';
+    const agentId = process.env.XAI_AGENT_ID?.trim() || 'agent_DIgjL0YG3j6ONPHm';
     const url = new URL('wss://api.x.ai/v1/realtime');
     if (agentId !== 'none') url.searchParams.set('agent_id', agentId);
     else url.searchParams.set('model', 'grok-voice-latest');
